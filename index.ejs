@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="index.js"></script>
+
+  
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            overflow-y: scroll; /* Enable vertical scrolling */
+        }
+
+        header {
+            background-color: #111;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #welcome-message {
+            margin: 30px;
+            font-size: 18px;
+        }
+      
+      #playlist-title-container {
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 50px;
+        }
+
+        #playlist-title {
+            font-size: 28px;
+        }
+
+        #playlist-section {
+            margin: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 70px; /* we add margin to the bottom to see the panel and last containers at the same time */
+        }
+
+        .playlist-box {
+            width: 27%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .playlist-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .playlist-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+      
+      .control-button svg path {
+    fill: #fff;
+}
+
+    .control-button2 svg path {
+    fill: #fff;
+}
+
+        #main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      /* Optionally, set a minimum height for better appearance */
+        #main-container {
+            min-height: 80vh;
+        }
+
+        #player {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #song-panel {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 99%;
+            height: 40px; /* Adjusted height of the rectangle*/
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #song-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 3px;
+            margin-right: 40px; /* Added margin for separation */
+        }
+
+        #song-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #player-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .control-button {
+            background-color: #1db99f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+      
+      .control-button2 {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+      
+      .pause-button2 {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+      
+      .play-button2 {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+      
+      .playlist-image {
+            width: 70%; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+        }
+      
+          #cancelButton {
+        background-color: #555;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #cancelButton:hover {
+        background-color: #777;
+    }
+      
+    </style>
+</head>
+
+<body>
+
+    <header>
+        
+    </header>
+
+  
+    <div id="welcome-message">
+        Welcome Oliver!
+      <button onclick="alert('You are a listener. Go back to change your profile!')">Change Profile</button>
+    </div>
+    </div>
+  
+  <div id="playlist-title-container">
+        <div id="playlist-title">Your Playlists</div>
+    </div>
+
+    <div id="playlist-section">
+        <div class="playlist-box">
+            <div class="playlist-title">Trance</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1547669270-e1a9dcd106b6?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQxODJ8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/screen2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Blade Techno</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1511924473169-58650b22e48f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQxODJ8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/screen2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">House</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1560322611-a2c5b22b79ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQxODJ8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/screen2" class="control-button">Go</a>
+            </div>
+        </div>
+    </div>
+  
+    <div id="playlist-title-container">
+        <div id="playlist-title">New albums from your favorite DJs</div>
+    </div>
+  
+  <div id="playlist-section">
+        <div class="playlist-box">
+            <div class="playlist-title">Maddix</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1618055118913-8e95d71d03e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQxODJ8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/index2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Nina Kraviz</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1520242739010-44e95bde329e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQxODJ8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/index2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Trym</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1631901589746-219fcffbdd29?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQxODJ8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/index2" class="control-button">Go</a>
+            </div>
+        </div>
+    </div>
+  
+  <div id="playlist-title-container">
+        <div id="playlist-title">Recommended songs</div>
+    </div>
+  
+  <div id="playlist-section">
+        <div class="playlist-box">
+            <div class="playlist-title">Bola de god</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1530352865347-3c2e277abefe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQ1Nzh8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/screen2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Slytherin</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1571693950015-b310115f90fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQ1Nzh8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/screen2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Transition</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1570773455183-e95ad040b034?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQ1Nzh8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/screen2" class="control-button">Go</a>
+            </div>
+        </div>
+    </div>
+  
+    <div id="playlist-title-container">
+        <div id="playlist-title">Artists you will like</div>
+    </div>
+  
+  <div id="playlist-section">
+        <div class="playlist-box">
+            <div class="playlist-title">Mandragora</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1532876213800-db18f03265e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQ3NDd8&ixlib=rb-4.0.3&q=85 alt="Trance Image">
+            <div class="playlist-controls">
+                <a href="/index2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Disguised</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1571751239008-50cad6cb9265?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQ3NDd8&ixlib=rb-4.0.3&q=85 alt="Disguised Image">
+            <div class="playlist-controls">
+                <a href="/index2" class="control-button">Go</a>
+            </div>
+        </div>
+
+        <div class="playlist-box">
+            <div class="playlist-title">Axyom</div>
+          <img class="playlist-image" src=https://images.unsplash.com/photo-1560084355-96dc9ca52245?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTY0NTQ4NDF8&ixlib=rb-4.0.3&q=85 alt="Axyom Image">
+            <div class="playlist-controls">
+                <a href="/index2" class="control-button">Go</a>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="song-panel">
+        <div id="song-info">
+            <img id="song-image"
+                src="https://images.unsplash.com/photo-1693856758403-bba589db78dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTYxMDg4MTd8&ixlib=rb-4.0.3&q=85">
+            <div id="song-title">Song Title</div>
+        </div>
+        <div id="player-controls">
+            <button class="control-button2" id="prevButton">
+                <svg viewBox="0 0 256 512" width="10" title="angle-left">
+                    <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                </svg>
+            </button>
+            <a href="/index3" class="control-button2">
+                <svg viewBox="0 0 448 512" width="15" title="pause">
+                    <path
+                        d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+                </svg></a>
+
+            <button class="control-button2" id="nextButton">
+                <svg viewBox="0 0 256 512" width="10" title="angle-right">
+                    <path
+                        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+</body>
+
+</html>
