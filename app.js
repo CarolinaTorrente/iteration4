@@ -31,6 +31,16 @@ app.get('/index3', (req, res) => {
   res.render('index3');
 });
 
+//route to handle the form submission
+app.post('/form', (req, res) => {
+  const username = req.body.username; 
+  const password = req.body.password; 
+
+    if (username === 'Oliver' && password === '1234') {
+      res.redirect('index'); 
+  } else {
+      res.render('form');
+}});
 
 
 app.listen(port, () => {
