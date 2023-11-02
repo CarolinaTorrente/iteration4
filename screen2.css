@@ -1,0 +1,50 @@
+.add-button, .delete-button {
+    background-color: #1db99f;
+    fill: #fff;
+    color: #fff;
+    border: none;
+    padding: 1px 2px; /* Adjust padding to reduce height */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.control-button2 svg path {
+    fill: #fff;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: #111;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+table {
+       border-collapse: collapse; /* Added to make row lines straight */
+}
+
+#cancelButton {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cancelButton:hover {
+    background-color: #777;
+}

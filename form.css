@@ -1,0 +1,91 @@
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    margin-bottom: 75px;
+    background-color: #050505; 
+}
+
+.main-container {
+    position: relative;
+    height: 40vh;
+    background-image: url('https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTc1OTA2Mzl8&ixlib=rb-4.0.3&q=85');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: left;
+    background-color: transparent;
+    z-index: 1;
+}
+
+h1 {
+    margin-left: 20px;
+    margin-top: 150px;
+    z-index: 1;
+    color: #fff;
+}
+
+form {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    background-color: #1db99f;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #157d6a;
+}
+
+.black-bg {
+    background-color: #000;
+    height: 60vh;
+
+}
+
+.control-button {
+    background-color: #1db99f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 05px;
+    cursor: pointer;
+}
